@@ -1,7 +1,7 @@
 
 # ==== Exporting Files ====
 
-## Core Data 
+## Core Data -- to be saved within the "script" folder of the JDH article repo
 
 ### Network
 
@@ -38,35 +38,35 @@ network_edges <- data.frame(
   st_sf(geometry = edges_geom)
 
 #### Export: nodes + edges
-st_write(network_nodes, "network_nodes.geojson", delete_dsn = FALSE)
-st_write(network_edges, "network_edges.geojson", delete_dsn = FALSE)
+st_write(network_nodes, "script/network_nodes.geojson", delete_dsn = FALSE)
+st_write(network_edges, "script/network_edges.geojson", delete_dsn = FALSE)
 
 #### Export: connectivity data
 edge_list <- as_data_frame(network, what = "edges")
 node_list <- as_data_frame(network, what = "vertices")
 
-write.csv(edge_list, "network_connectivity_edges.csv", row.names = FALSE)
-write.csv(node_list, "network_connectivity_nodes.csv", row.names = FALSE)
+write.csv(edge_list, "script/network_connectivity_edges.csv", row.names = FALSE)
+write.csv(node_list, "script/network_connectivity_nodes.csv", row.names = FALSE)
 
 print("Network data exported successfully!")
 
 ### Buildings
-st_write(buildings, "buildings.gpkg", delete_dsn = FALSE)
+st_write(buildings, "script/buildings.gpkg", delete_dsn = FALSE)
 
 ## Municipal Boundaries
-st_write(aarhus, "aarhus_mun.geojson", delete_dsn = FALSE)
-st_write(aarhus_city1952, "aarhus_city1952.gpkg", delete_dsn = FALSE)
+st_write(aarhus, "script/aarhus_mun.geojson", delete_dsn = FALSE)
+st_write(aarhus_city1952, "script/aarhus_city1952.gpkg", delete_dsn = FALSE)
 
 ## Combined Shelter Dataset
-st_write(shelters, "shelters.gpkg", delete_dsn = FALSE)
+st_write(shelters, "script/shelters.gpkg", delete_dsn = FALSE)
 
 ## Building-Shelter Pair Data
 building_shelter_pairs_csv <- building_shelter_pairs %>%
   st_drop_geometry() # issues occur without dropping geometry here (it is re-merged in Python)
 
-write.csv(building_shelter_pairs_csv, "building_shelter_pairs.csv", row.names = FALSE)
+write.csv(building_shelter_pairs_csv, "script/building_shelter_pairs.csv", row.names = FALSE)
 
 buildings_spatial <- building_shelter_pairs %>%
   select(id_lokalId, byg404Koordinat)
 
-st_write(buildings_spatial, "buildings_from_pairs.gpkg", delete_dsn = FALSE)
+st_write(buildings_spatial, "script/buildings_from_pairs.gpkg", delete_dsn = FALSE)

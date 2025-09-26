@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y git
 
 USER jovyan
 WORKDIR $HOME
+
 ## Install Python citation manager
 RUN pip install --no-cache-dir jupyterlab-citation-manager
 COPY requirements.txt .
