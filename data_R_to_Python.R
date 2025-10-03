@@ -1,7 +1,18 @@
-
 # ==== Exporting Files ====
 
+# libraries
+library(sf)
+library(dplyr)
+library(sfnetworks)
+library(igraph)
+library(tidygraph)
+
 ## Core Data -- to be saved within the "script" folder of the JDH article repo
+
+# ACTION NEEDED: EDIT the following path according to YOUR docker location
+
+setwd("C://Users/Adela/JDH_SpatialEquity/work")
+
 
 ### Network
 
