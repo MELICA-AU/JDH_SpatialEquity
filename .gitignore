@@ -1,2 +1,5 @@
+work/script/dma.csv
 **/.ipynb_checkpoints/
 .DS_Store
+*.rds
+*.csv	
