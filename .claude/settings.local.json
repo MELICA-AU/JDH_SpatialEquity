@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/Adela/.claude/plugins/**)",
+      "Read(//c/Users/Adela/.claude/plugins/marketplaces/**)",
+      "Read(//c/Users/Adela/denubis-plugins/plugins/**)",
+      "Bash(git -C ~/denubis-plugins remote -v)",
+      "Bash(git -C ~/denubis-plugins status -sb)",
+      "Bash(git -C ~/denubis-plugins log --oneline -5)",
+      "Skill(denubis-bibliography:using-bibliography)",
+      "Bash(curl.exe -sS --max-time 10 -X POST -H \"Content-Type: application/json\" -d \"{\\\\\"jsonrpc\\\\\":\\\\\"2.0\\\\\",\\\\\"method\\\\\":\\\\\"item.search\\\\\",\\\\\"params\\\\\":[\\\\\"Talen 1998\\\\\", 7],\\\\\"id\\\\\":1}\" http://localhost:23119/better-bibtex/json-rpc)",
+      "Bash(curl.exe -sS --max-time 10 -X POST -H \"Content-Type: application/json\" -d \"{\\\\\"jsonrpc\\\\\":\\\\\"2.0\\\\\",\\\\\"method\\\\\":\\\\\"item.search\\\\\",\\\\\"params\\\\\":[\\\\\"Talen 1998\\\\\", 9],\\\\\"id\\\\\":1}\" http://localhost:23119/better-bibtex/json-rpc)",
+      "Bash(python jdh_fix_citations.py)",
+      "Bash(set PYTHONIOENCODING=utf-8)",
+      "Bash(MSYS_NO_PATHCONV=1 docker exec jdh_spatialequity-jupyter-1 ls /work)"
+    ]
+  }
+}

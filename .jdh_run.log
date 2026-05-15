@@ -1,0 +1,39 @@
+[1/6] Fetching MELICA items via local Zotero API...
+      retrieved 219 MELICA items (non-attachment, non-note)
+[2/6] Fetching MELICA cite-keys via library.json...
+      indexed 79 DOIs, 152 titles, 136 (surname,year) buckets
+      cite-key -> item-key: 183 mapped
+[3/6] Parsing JDH-spatial-equity.bib...
+      parsed 74 entries
+      .bib -> MELICA: 74/74
+[4/6] Extracting inline cites from shelters-for-all.ipynb...
+      found 76 inline cite tags
+      harvested 18 (group, old_key) -> entry texts from bibliography cell
+[5/6] Resolving inline cites against MELICA...
+      resolved: 76/76 inline cites
+
+=== SUMMARY (resolution phase) ===
+MELICA items: 219
+.bib entries: 74, in MELICA: 74
+inline cite tags: 76
+resolved inline cites: 76/76 (0 unresolved)
+
+[6/8] Rewriting inline cites in notebook cells...
+      applied 76 cite replacements across 17 cells
+
+[7/8] Generating Chicago Author-Date bibliography via BBT...
+      60 unique items in bibliography
+      batch 0-10 OK (7861 chars)
+      batch 10-20 OK (8108 chars)
+      batch 20-30 OK (8330 chars)
+      batch 30-40 OK (6197 chars)
+      batch 40-50 OK (7382 chars)
+      batch 50-60 OK (5119 chars)
+      flattened to 56 csl-entry divs from 56 keys
+      bibliography cell rewritten with 56 entries
+
+[8/8] Writing notebook (backup -> shelters-for-all.ipynb.bak)...
+      backup written: C:\Users\Adela\JDH_SpatialEquity\work\shelters-for-all.ipynb.bak
+      notebook written: C:\Users\Adela\JDH_SpatialEquity\work\shelters-for-all.ipynb
+
+=== DONE ===
