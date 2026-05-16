@@ -19,3 +19,4 @@ work/*.broken
 work/*.preconvert
 work/*.commit*
 desktop.ini
+data/
