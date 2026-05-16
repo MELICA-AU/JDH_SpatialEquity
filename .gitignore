@@ -2,4 +2,20 @@ work/script/dma.csv
 **/.ipynb_checkpoints/
 .DS_Store
 *.rds
-*.csv	
+*.csv
+
+# JDH citation-conversion intermediate state
+.jdh_state.json
+.jdh_run.log
+.jdh_manual_resolution.json
+
+# Local CSL-JSON exports of Zotero (regenerate from Zotero if needed)
+.melica_se.json
+.melica_se.csljson
+
+# Backup files
+*.bak
+work/*.broken
+work/*.preconvert
+work/*.commit*
+desktop.ini
